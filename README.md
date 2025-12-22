@@ -8,6 +8,22 @@ This repository primarily serves to organize and monitor my personal dotfiles.
 
 ![](images/screen.png)
 
+## Installation
+
+```bash
+sudo pacman -S --needed \
+  breeze-gtk ttf-jetbrains-mono-nerd \
+  hypridle hyprland hyprlock hyprpolkitagent \
+  xdg-desktop-portal-hyprland xdg-user-dirs nwg-look pavucontrol rofi \
+  cliphist waybar ly qt5-wayland qt6-wayland \
+  yazi zoxide 7zip jq fd poppler fzf ripgrep resvg imagemagick ffmpeg sshfs \
+  alsa-utils pipewire-alsa pipewire-pulse brightnessctl networkmanager gnome-keyring \
+  kitty firefox git stow grim gvim btop fastfetch wl-clipboard sudo slurp swappy \
+  neovim tree-sitter-cli unzip npm \
+  ntfs-3g udiskie swaync swww \
+  zsh zsh-completions zsh-syntax-highlighting
+```
+
 ## Credits
 
 - [https://github.com/lvntcnylmz/dotfiles](https://github.com/lvntcnylmz/dotfiles)
