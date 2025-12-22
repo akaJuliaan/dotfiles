@@ -1,0 +1,23 @@
+#!/bin/bash
+
+interface=$(ip route | grep default | awk '{print $5}')
+ip_address=$(ip -4 addr show "$interface" | grep -oP '(?<=inet\s)\d+(\.\d+){3}')
+
+eth_operstate="down" #$(cat /sys/class/net/enp37s0/operstate)
+#eth_operstate1=$(cat /sys/class/net/enp0s20f0u3/operstate)
+wifi_operstate=$(cat /sys/class/net/wlp0s20f3/operstate)
+
+
+
+#if [[ "$eth_operstate" == "up" || "$eth_operstate1" == "unknown" ]]; then
+#    echo "{\"text\": \"󰈀 eth\", \"class\": \"ethernet\", \"tooltip\": \"$ip_address\"}"
+#fi
+
+
+if [[ "$wifi_operstate" == "up" ]]; then
+    echo "{\"text\": \" wifi\", \"class\": \"wifi\", \"tooltip\": \"$ip_address\"}"
+fi
+
+if [[ "$wifi_operstate" != "up" && "$eth_operstate" != "up" ]]; then
+    echo "{\"text\": \" disconnected\", \"class\": \"disconnected\"}"
+fi

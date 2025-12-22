@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+set -e
+
+# aktuelles Verzeichnis, in dem yazi gerade ist
+DIR="$PWD"
+
+# Namen abfragen
+printf "Dateiname: "
+read -r NAME
+
+# Abbrechen, falls leer
+[ -z "$NAME" ] && exit 1
+
+# Befehl ausführen
+wl-paste > "$DIR/$NAME"
+
+
+
+
+#wl-copy "file://$1" -t text/uri-list
+
+#
+#if [[ $1 == *.jpg || $1 == *.jpeg ]]
+#then
+#    wl-copy -t image/png < $1
+#else
+#    wl-copy < $1
+#fi
+
