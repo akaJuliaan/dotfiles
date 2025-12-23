@@ -12,7 +12,7 @@ This repository primarily serves to organize and monitor my personal dotfiles.
 
 ```bash
 sudo pacman -S --needed \
-  breeze-gtk ttf-jetbrains-mono-nerd \
+  breeze breeze-gtk qt6ct ttf-jetbrains-mono-nerd \
   hypridle hyprland hyprlock hyprpolkitagent \
   xdg-desktop-portal-hyprland xdg-user-dirs nwg-look pavucontrol rofi \
   cliphist waybar ly qt5-wayland qt6-wayland \
