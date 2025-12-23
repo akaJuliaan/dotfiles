@@ -15,11 +15,11 @@ elif [[ "$capacity" -ge 60 ]]; then
 elif [[ "$capacity" -ge 50 ]]; then
     baticon="󰁿"
 elif [[ "$capacity" -ge 40 ]]; then
-    baticon="󰁾" 
+    baticon="󰁾"
 elif [[ "$capacity" -ge 30 ]]; then
     baticon="󰁽"
 elif [[ "$capacity" -ge 20 ]]; then
-    baticon="󰁻" 
+    baticon="󰁻"
 elif [[ "$capacity" -ge 10 ]]; then
     baticon="󰁺"
 else
