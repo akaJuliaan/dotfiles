@@ -21,6 +21,11 @@ window#waybar.hidden {
   margin: 0px 10px;
 }
 
+#battery.charging {
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
 #workspaces button {
   color: #c0c6f5;
   background-color: #010101;
