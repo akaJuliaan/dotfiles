@@ -39,6 +39,9 @@ source <(fzf --zsh)
 # Use better VIM mode
 source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
+# Auto completion for dotnet
+eval "$(dotnet completions script zsh)"
+
 # Show git in prompt
 autoload -Uz vcs_info
 precmd() { vcs_info }
