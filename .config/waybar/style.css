@@ -21,9 +21,18 @@ window#waybar.hidden {
   margin: 0px 10px;
 }
 
-#battery.charging {
-  padding: 5px 10px;
+#battery.warning {
+  background-color: #e0c6f5;
+  color: #010101;
+  padding: 0px 10px;
   border-radius: 10px;
+} 
+
+#battery.charging {
+  padding: 0px 10px;
+  border-radius: 10px;
+  color: #010101;
+  background-color: #c0c6f5;
 }
 
 #workspaces button {
