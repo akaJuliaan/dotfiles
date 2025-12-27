@@ -42,6 +42,11 @@ source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 # Auto completion for dotnet
 eval "$(dotnet completions script zsh)"
 
+path+=('~/.dotnet/tools')
+
+# Alias ssh for kitten
+[ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
+
 # Show git in prompt
 autoload -Uz vcs_info
 precmd() { vcs_info }
