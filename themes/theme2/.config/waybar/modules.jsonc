@@ -1,0 +1,124 @@
+{
+  "hyprland/workspaces": {
+    "all-outputs": true,
+    "on-click": "activate",
+    "format": "{name}",
+    "persistent-workspaces": {
+      "*": 5
+    }
+  },
+ "tray": {
+    "icon-size": 18,
+    "spacing": 6
+ },
+ "custom/distro": {
+    "format": "󰣇"
+  }, 
+ "custom/spacer": {
+      "format": " ",
+      "tooltip": false,
+  },
+
+  "custom/spacer1": {
+      "format": "",
+      "tooltip": false,
+  },
+
+  "custom/spacer2": {
+      "format": "",
+      "tooltip": false,
+  },
+
+  "custom/spacer3": {
+      "format": "",
+      "tooltip": false,
+  },
+
+  "custom/spacer4": {
+      "format": "",
+      "tooltip": false,
+  },
+
+  "custom/spacer5": {
+      "format": "",
+      "tooltip": false,
+  },
+
+  "custom/spacer6": {
+      "format": "",
+      "tooltip": false,
+  },
+ "clock": {
+    "timezone": "Europe/Vienna",
+    "tooltip": false,
+    "format": "{:%H:%M   -  %A, %d}",
+    "interval": 1
+  },
+  "network": {
+    "format-wifi": "󰤢",
+    "format-ethernet": "󰈀 ",
+    "format-disconnected": "󰤠 ",
+    "interval": 5,
+    "tooltip-format": "{essid} ({signalStrength}%)",
+    "on-click": "nm-connection-editor"
+  },
+  "bluetooth": {
+    "format": "󰂲",
+    "format-on": "{icon}",
+    "format-off": "{icon}", 
+    "format-connected":"{icon}",
+    "format-icons":{
+        "on":"󰂯",
+        "off": "󰂲",
+        "connected": "󰂱",
+        },
+    "on-click": "blueman-manager",
+    "tooltip-format-connected":"{device_enumerate}"
+  },
+  "backlight": {
+    "format": "{icon}  {percent}%",
+    "format-icons": ["","󰃜", "󰃛", "󰃞","󰃝","󰃟","󰃠"],
+    "tooltip": false
+  },
+  "pulseaudio": {
+    "format": "{icon}  {volume}%",
+    "format-muted": "",
+    "format-icons": {
+      "default": ["", "", " "]
+    },
+    "on-click": "pavucontrol"
+  },
+  "battery": {
+    "interval": 2,
+    "states": {
+        "warning": 30,
+        "critical": 15
+    },
+    "format": "{icon}  {capacity}%",
+    "format-full": "{icon}  {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-alt": "{icon} {time}",
+    "format-icons": ["", "", "", "", ""]
+  },
+  "custom/notification": {
+    "tooltip": true,
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "󱅫",
+      "none": "󰂜",
+      "dnd-notification": "󰂠",
+      "dnd-none": "󰪓",
+      "inhibited-notification": "󰂛",
+      "inhibited-none": "󰪑",
+      "dnd-inhibited-notification": "󰂛",
+      "dnd-inhibited-none": "󰪑"
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  }
+}

@@ -1,0 +1,6 @@
+# Show git in prompt
+autoload -Uz vcs_info
+precmd() { vcs_info }
+setopt prompt_subst
+
+PROMPT='%F{red}%n@%m %F{green}%~ %F{red}$vcs_info_msg_0_%F{cyan}$ %f '

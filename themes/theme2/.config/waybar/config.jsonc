@@ -1,0 +1,27 @@
+{
+  "reload_style_on_change": true,
+  "layer": "top",
+  "position": "top",
+  "name": "main",
+  "height": 35,
+  "modules-left": [
+    "custom/distro",
+    "hyprland/workspaces"
+  ],
+  "modules-center": [
+    "custom/spacer1",
+    "clock",
+    "custom/spacer2"
+  ],
+  "modules-right": [
+    "custom/spacer6",
+    "custom/notification",
+    "bluetooth",
+    "network",
+    "pulseaudio",
+    "custom/spacer6",
+    "backlight",
+    "battery"
+  ],
+  "include": "~/.config/waybar/modules.jsonc"
+}

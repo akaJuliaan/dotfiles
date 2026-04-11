@@ -1,0 +1,13 @@
+[services.paris]
+type = "sftp"
+host = "83.218.160.108"
+user = "julian"
+port = 22
+key_file = "~/.ssh/id_rsa"
+
+[services.classinsights]
+type = "sftp"
+host = "45.81.233.32"
+user = "classinsights"
+port = 22
+key_file = "~/.ssh/id_rsa"
