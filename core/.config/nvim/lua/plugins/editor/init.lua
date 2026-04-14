@@ -1,0 +1,6 @@
+require 'plugins.editor.autocomplete'
+require 'plugins.editor.gitsigns'
+require 'plugins.editor.indent-blankline'
+require 'plugins.editor.misc'
+require 'plugins.editor.telescope'
+require 'plugins.editor.treesitter'

@@ -1,0 +1,5 @@
+require 'plugins.ui.colortheme'
+require 'plugins.ui.bufferline'
+require 'plugins.ui.lualine'
+require 'plugins.ui.neo-tree'
+require 'plugins.ui.which-key'
