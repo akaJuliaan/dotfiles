@@ -55,7 +55,7 @@ path+=('~/.dotnet/tools')
 [ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
 
 # Load prompt depending on theme
-source .zsh_prompt
+source ~/.zsh_prompt
 
 
 # Load Angular CLI autocompletion.
