@@ -1,44 +1,56 @@
 configuration {
-    modes: "drun,run";
-    font:  "Mono 12";
-}
-
-* {
-    foreground: #c0c6f5;
-    background: #16161e;
-    selected-normal-background:  #2d3f76;
-    selected-active-background:  #ffc777;
-    alternate-normal-background: var(background);
-    alternate-active-background: var(background);
-}
-
-window {
-    width: 32%;
-}
-
-inputbar {
-    padding:  10px;
-    children: [ entry ];
-}
-
-message {
-    border: 2px solid 0px 0px;
+    sidebar-mode: false;
 }
 
 entry {
-    placeholder: "";
+    placeholder: "Type here";
+}
+
+prompt {
+    enabled: false;
+}
+
+textbox-prompt-colon {
+    enabled: false;
+}
+
+* {
+    background: transparent;
+    alternate-normal-background: transparent;
+    foreground: white;
+    text-color: white;
+    selected-normal-foreground: white;
+    border: none;
+}
+
+scrollbar {
+    handle-color: transparent;
+}
+
+window {
+    font: "System San Francisco Display 18";
+    fullscreen: true;
+    transparency: "background";
+    border: 0;
+    background-color: #282c34d0;
+    children: [ dummy1, hdum, dummy2 ];
+}
+
+#hdum {
+    orientation: horizontal;
+    children: [ dummy3, mainbox, dummy4 ];
 }
 
 listview {
-    lines:     6;
-    scrollbar: false;
-    border:    2px solid 0px 0px;
-}
-
-element {
-    padding: 10px ;
+    border: none;
 }
 
 element-text {
-    highlight: #0db9d7;
+    font: "System San Francisco Display 14";
+    vertical-align: 0.5;
+}
+
+element selected {
+    text-color: #ffffff;
+    padding: 5px;
 }
