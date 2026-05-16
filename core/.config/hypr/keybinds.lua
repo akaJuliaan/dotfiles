@@ -59,7 +59,16 @@ local osd = "swayosd-client --monitor \"$(hyprctl monitors -j | jq -r '.[] | sel
 hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd(osd .. " --output-volume raise"), { locked = true, repeating = true })
 hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd(osd .. " --output-volume lower"), { locked = true, repeating = true })
 hl.bind("XF86AudioMute", hl.dsp.exec_cmd(osd .. " --output-volume mute-toggle"), { locked = true, repeating = true })
-hl.bind("XF86AudioMicMute", hl.dsp.exec_cmd(osd .. " --input-volume mute-toggle"), { locked = true, repeating = true })
+hl.bind(
+	"XF86AudioMicMute",
+	hl.dsp.exec_cmd([[
+            wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
+            icon=high
+            wpctl get-volume @DEFAULT_AUDIO_SOURCE@ | grep -q MUTED && icon=muted
+            swayosd-client --custom-message "Microphone" --custom-icon "source-volume-$icon-symbolic"
+        ]])
+)
+
 hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd(osd .. " --brightness raise"), { locked = true, repeating = true })
 hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd(osd .. " --brightness lower"), { locked = true, repeating = true })
 
