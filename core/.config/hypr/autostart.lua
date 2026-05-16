@@ -3,7 +3,7 @@
 -------------------
 
 hl.on("hyprland.start", function()
-	hl.exec_cmd("waybar & awww-daemon & hypridle")
+	hl.exec_cmd("waybar & awww-daemon & hypridle & swayosd-server")
 
 	-- Auto-mount removable storage
 	hl.exec_cmd("udiskie")

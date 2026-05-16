@@ -21,7 +21,8 @@ sudo pacman -S --needed \
   kitty firefox git stow grim gvim btop fastfetch wl-clipboard sudo slurp swappy \
   neovim tree-sitter-cli unzip npm \
   ntfs-3g udiskie swaync swww \
-  zsh zsh-completions zsh-syntax-highlighting
+  zsh zsh-completions zsh-syntax-highlighting \
+  swayosd
 ```
 
 ## Credits
