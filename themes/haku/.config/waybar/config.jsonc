@@ -1,0 +1,193 @@
+{
+  "layer": "top",
+  "position": "top",
+  "margin-top": 5,
+  "margin-bottom": 0,
+  "margin-left": 5,
+  "margin-right": 5,
+  "spacing": 2,
+  "height": 40,
+  "tooltip": true,
+
+  "modules-left": ["hyprland/workspaces", "mpris"],
+  "modules-center": [],
+  "modules-right": [
+    "battery",
+    "backlight",
+    "clock",
+    "power-profiles-daemon",
+    "custom/notification",
+    "pulseaudio",
+    "tray",
+  ],
+
+  "mpris": {
+    "format": "{player_icon} {title} - {artist}",
+    "format-paused": "{status_icon} <i>{title} - {artist}</i>",
+    "player-icons": {
+      "default": "▶",
+      "mpv": "🎵",
+    },
+    "status-icons": {
+      "paused": "⏸",
+    },
+    "ignored-players": ["firefox"],
+  },
+
+  "hyprland/workspaces": {
+    "all-outputs": true,
+    "sort-by-number": true,
+    "show-special": true,
+    "on-scroll-up": "hyprctl dispatch 'hl.dsp.focus({ workspace = \"e-1\" })'",
+    "on-scroll-down": "hyprctl dispatch 'hl.dsp.focus({ workspace = \"e+1\" })'",
+    "format": "{icon} {windows} ",
+    "format-icons": {
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+    },
+    "format-window-separator": " ",
+    "window-rewrite-default": "",
+    "window-rewrite": {
+      "title<.*youtube.*>": "",
+      "class<firefox>": "󰈹",
+      "class<zen>": "",
+      "class<firefox> title<.*github.*>": "",
+      "kitty": "",
+      "thunar": "󰝰",
+      "nemo": "󰝰",
+      "code": "󰨞",
+      "cavaunderbar": "",
+      "title<.* - (.*) - VSCodium>": "codium $1",
+      "Prism Launcher .*": "󰍳",
+      "CurseForge": "󰍳",
+      "Minecraft": "󰍳",
+      "class<seyclock>": "h",
+      "class<seymatrix>": "a",
+      "class<seycava>": "a",
+      "class<seycmd>": "k",
+      "class<seypipes>": "u",
+      "class<seylavat>": "",
+      "Steam": "",
+      "spotify": "",
+      "Star Rail": "",
+      "Send": "",
+      "brave": "",
+      "rider": "",
+      "datagrip": "",
+      "libreoffice": "",
+      "discord": "",
+    },
+  },
+
+  "hyprland/window": {
+    "format": "{}",
+    "expand": false,
+    "icon": true,
+    "icon-size": 24,
+  },
+
+  "memory": {
+    "interval": 15,
+    "format": " {used:0.1f}/{total:0.1f}",
+  },
+
+  "cpu": {
+    "interval": 5,
+    "format": " {usage}%",
+  },
+
+  "custom/notification": {
+    "tooltip": false,
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "<span foreground='red'><sup></sup></span> ",
+      "none": " ",
+      "dnd-notification": "<span foreground='red'><sup></sup></span> ",
+      "dnd-none": " ",
+      "inhibited-notification": "<span foreground='red'><sup></sup></span> ",
+      "inhibited-none": " ",
+      "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span> ",
+      "dnd-inhibited-none": " ",
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true,
+  },
+
+  "backlight": {
+    "device": "intel_backlight",
+    "format": "{icon} {percent}%",
+    "format-icons": ["", "", "", "", "", "", "", "", ""],
+    "on-scroll-up": "brightnessctl set 1%+",
+    "on-scroll-down": "brightnessctl set 1%-",
+    "min-length": 6,
+    "on-click": "hyprsunset --temperature 3000",
+    "on-click-right": "pkill hyprsunset",
+  },
+
+  "power-profiles-daemon": {
+    "format": "{icon}",
+    "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+    "tooltip": true,
+    "format-icons": {
+      "default": "󰗑",
+      "performance": "󱓟",
+      "balanced": "󰗑",
+      "power-saver": "󰌪",
+    },
+  },
+
+  "clock": {
+    "timezone": "Europe/Vienna",
+    "locale": "en_US.UTF-8",
+    "format": " {:%d/%m/%Y} ",
+    "format-alt": " {:%H:%M} ",
+    "interval": 1,
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode": "month",
+      "on-scroll": 1,
+      "format": {
+        "months": "<span color='#ffead3'><b>{}</b></span>",
+        "days": "<span color='#ecc6d9'><b>{}</b></span>",
+        "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "today": "<span color='#FF003C'><b><u>{}</u></b></span>",
+      },
+    },
+  },
+
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15,
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": "󱊦 {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-icons": ["", "", "", "", ""],
+  },
+
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "󰝟 Muted",
+    "format-icons": {
+      "headphone": "",
+      "default": ["", "", ""],
+    },
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+    "on-click-right": "pavucontrol",
+  },
+
+  "tray": {
+    "icon-size": 15,
+    "spacing": 10,
+    "show-passive-items": true,
+  },
+}

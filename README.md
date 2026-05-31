@@ -22,7 +22,8 @@ sudo pacman -S --needed \
   neovim tree-sitter-cli unzip npm \
   ntfs-3g udiskie swaync swww \
   zsh zsh-completions zsh-syntax-highlighting \
-  swayosd
+  swayosd power-profiles-daemon network-manager-applet \
+  blueman-applet
 ```
 
 ## Credits
@@ -33,3 +34,4 @@ sudo pacman -S --needed \
 - [https://github.com/hendrikmi/dotfiles](https://github.com/hendrikmi/dotfiles)
 - [https://github.com/JaKooLit/Hyprland-Dots](https://github.com/JaKooLit/Hyprland-Dots)
 - [https://github.com/justinmdickey/publicdots](https://github.com/justinmdickey/publicdots)
+- [https://github.com/hakuimaku/hakudotfile](https://github.com/hakuimaku/hakudotfile)

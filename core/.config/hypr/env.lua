@@ -2,7 +2,8 @@
 ---- ENVIRONMENT VARIABLES ----
 -------------------------------
 
-hl.env("XCURSOR_SIZE", "24")
+--hl.env("XCURSOR_SIZE", "24")
+hl.env("HYPRCURSOR_THEME", "lliurex-cursors")
 hl.env("HYPRCURSOR_SIZE", "24")
 
 hl.env("EDITOR", "nvim")
