@@ -67,7 +67,7 @@ vim.pack.add {
   -- Misc
   'https://github.com/windwp/nvim-ts-autotag',
   'https://github.com/windwp/nvim-autopairs',
-  'https://github.com/norcalli/nvim-colorizer.lua',
+  'https://github.com/catgoose/nvim-colorizer.lua',
   'https://github.com/folke/todo-comments.nvim',
   'https://github.com/nvim-lua/plenary.nvim',
   'https://github.com/andweeb/presence.nvim',
