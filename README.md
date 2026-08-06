@@ -23,7 +23,7 @@ sudo pacman -S --needed \
   ntfs-3g udiskie swaync swww \
   zsh zsh-completions zsh-syntax-highlighting \
   swayosd power-profiles-daemon network-manager-applet \
-  blueman-applet
+  blueman-applet hyprsunset
 ```
 
 ## Credits
