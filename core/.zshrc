@@ -77,7 +77,7 @@ zvm_after_init() {
 path+=('~/.dotnet/tools')
 
 # Alias ssh for kitten
-[ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
+alias s="kitten ssh"
 
 alias l="ls -lFh"
 alias la="ls -lAFh"
